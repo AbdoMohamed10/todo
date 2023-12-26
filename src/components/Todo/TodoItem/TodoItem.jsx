@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Checkbox, ListItem, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
-import {editTodo} from "../../redux/slices/todoSlice";
+import {editTodo} from "../../../redux/slices/todoSlice";
 import {useDispatch} from "react-redux";
 import TodoItemActions from "./TodoItemActions/TodoItemActions";
 import TodoFormModal from "../TodoFormModal/TodoFormModal";
@@ -27,7 +27,6 @@ const TodoItem = ({ todo, showInfo }) => {
 
     return (
         <ListItem
-            key={todo.id}
             disablePadding
             secondaryAction={
                 <TodoItemActions todo={todo} setEditIsOpen={setEditIsOpen} />

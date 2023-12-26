@@ -5,7 +5,7 @@ import TodoItem from "../TodoItem/TodoItem";
 import TodoItemInfo from "../TodoItem/TodoItemInfo/TodoItemInfo";
 
 const TodoList = () => {
-    const todoList = useSelector(state => state.todos)
+    const todoList = useSelector(state => state.todo.todos)
     const [selectedTodo, setSelectedTodo] = useState(null)
     const [infoIsOpen, setInfoIsOpen] = useState(false)
 
@@ -20,7 +20,7 @@ const TodoList = () => {
                 {todoList.map((todo) => {
 
                     return (
-                        <TodoItem todo={todo} showInfo={handleShowTodoInfo} />
+                        <TodoItem key={todo.id} todo={todo} showInfo={handleShowTodoInfo} />
                     );
                 })}
             </List>

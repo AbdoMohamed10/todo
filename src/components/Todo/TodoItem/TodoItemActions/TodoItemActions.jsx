@@ -5,7 +5,7 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 import EditIcon from '@mui/icons-material/Edit';
 import moment from "moment";
 import {useDispatch} from "react-redux";
-import {archiveTodo, deleteTodo} from "../../../redux/slices/todoSlice";
+import {archiveTodo, deleteTodo} from "../../../../redux/slices/todoSlice";
 
 const TodoItemActions = ({ todo, setEditIsOpen }) => {
     const dispatch = useDispatch()
